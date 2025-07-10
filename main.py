@@ -1,13 +1,8 @@
-# main.py
-
 from data import students
 from logic import get_student_details, add_student
 
 
 def display_student_report(students):
-    """
-    Displays the report for each student, including their total marks and percentage.
-    """
     for student in students:
         details = get_student_details(student)
         print(f"ID: {student['id']}")
@@ -18,9 +13,6 @@ def display_student_report(students):
 
 
 def add_new_student():
-    """
-    Prompts the user to enter new student data and adds the student to the list.
-    """
     id = int(input("Enter Student ID: "))
     name = input("Enter Student Name: ")
     marks = {
@@ -33,7 +25,6 @@ def add_new_student():
     print(f"Student {name} added successfully!")
 
 
-# Entry point to run the program
 if __name__ == "__main__":
     while True:
         print("\n1. View Student Report")
